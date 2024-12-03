@@ -1,5 +1,3 @@
-Aquí tienes un README más completo y profesional en inglés, adaptado a tu proyecto **HommieStock - Frontend**, con una descripción más detallada de su propósito y funcionalidades:
-
 ---
 
 # **HommieStock - Frontend**

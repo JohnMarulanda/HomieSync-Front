@@ -15,7 +15,7 @@ export function Sidebar({ tienda }: SidebarProps) {
   const pathname = usePathname();
 
   console.log(`Pathname = ${pathname}`);
-  const baseUrl = `${tienda.id}`;
+  const baseUrl = `${tienda._id}`;
 
   const navItems = [
     {

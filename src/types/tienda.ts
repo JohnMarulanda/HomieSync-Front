@@ -1,5 +1,5 @@
 export interface Tienda {
-  id: string;
+  _id: string;
   nombre: string;
   direccion: string;
   ciudad: string;

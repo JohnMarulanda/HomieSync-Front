@@ -13,7 +13,7 @@ export default async function TiendaLayout(props: TiendaLayoutProps) {
   const { params, children } = props;
 
   const tienda = await getTiendaById(params.id);
-  console.log(`Tienda en layout = ${tienda.id}`);
+  console.log(`Tienda en layout = ${tienda._id}`);
 
   if (!tienda) {
     notFound();

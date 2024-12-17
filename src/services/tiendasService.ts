@@ -42,11 +42,11 @@ export async function getTiendaById(id: string): Promise<Tienda> {
     }
 
     // Convierte la respuesta a JSON
-    const data: Tienda[] = await res.json();
-    console.log(`Tienda en service = ${data[0]._id}`);
+    const data: Tienda = await res.json();
+    console.log(`Tienda en service = ${data._id}`);
 
     // Retorna el primer elemento de la lista
-    return data[0];
+    return data;
   } catch (err) {
     console.error("Error al obtener la tienda por ID:", err);
     return { /* provide default values for Tienda properties here */ } as Tienda;

@@ -26,6 +26,8 @@ export async function getTiendas(): Promise<Tienda[]> {
 }
 
 export async function getTiendaById(id: string): Promise<Tienda> {
+
+  console.log(`Id de Tienda en service = ${id}`);
   try {
     const res = await fetch(`http://localhost:8000/tienda/${id}`, {
       method: 'GET',
@@ -41,6 +43,7 @@ export async function getTiendaById(id: string): Promise<Tienda> {
 
     // Convierte la respuesta a JSON
     const data: Tienda[] = await res.json();
+    console.log(`Tienda en service = ${data[0].id}`);
 
     // Retorna el primer elemento de la lista
     return data[0];

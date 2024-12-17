@@ -13,9 +13,9 @@ interface SidebarProps {
 
 export function Sidebar({ tienda }: SidebarProps) {
   const pathname = usePathname();
-  console.log(pathname);
+
+  console.log(`Pathname = ${pathname}`);
   const baseUrl = `${tienda.id}`;
-  console.log(tienda)
 
   const navItems = [
     {

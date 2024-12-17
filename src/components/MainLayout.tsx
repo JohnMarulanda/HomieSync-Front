@@ -7,6 +7,7 @@ interface MainLayoutProps {
 }
 
 export function MainLayout({ children, tienda }: MainLayoutProps) {
+
   return (
     <div className="min-h-screen bg-background">
       <Sidebar tienda={tienda} />

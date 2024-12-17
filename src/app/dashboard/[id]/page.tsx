@@ -5,16 +5,17 @@ import { getTiendaById } from "@/services/tiendasService";
 import { Sidebar } from '@/components/Sidebar';
 
 interface TiendaPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default async function DashboardPage({ params }: TiendaPageProps) {
+export default async function DashboardPage(props: TiendaPageProps) {
+  const params = await props.params;
 
   const tienda = await getTiendaById(params.id);
 
-  console.log(`Params.id = ${params}`);
+  console.log(`Params.id = ${params.id}`);
 
   if (!tienda) {
     notFound();
